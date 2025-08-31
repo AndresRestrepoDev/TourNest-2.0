@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="./user.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Barra lateral -->
+    <aside class="sidebar">
+      <h2>User Panel</h2>
+      <p id="User-name" style="text-align: center; font-weight: bold; font-style: italic;"></p>
+
+      <button data-section="hoteles-disponibles">Hoteles Disponibles</button>
+      <button data-section="actividades-disponibles">Actividades Disponibles</button>
+      <button data-section="mis-reservas">Mis Reservas</button>
+      <hr>
+      <button id="logoutBtn" class="logout-btn">Cerrar sesión</button>
+    </aside>
+
+    <!-- Contenedor principal -->
+    <main class="main-content">
+
+      <!-- SECCIÓN: Hoteles Disponibles -->
+        <div id="section-hoteles-disponibles" class="section">
+        <div class="center-container">
+            <h2>Hoteles Disponibles</h2>
+            <div id="user-hotel-list" class="hotel-container"></div>
+        </div>
+        </div>
+
+        <!-- SECCIÓN: Habitaciones -->
+        <div id="section-habitaciones-disponibles" class="section" style="display:none;">
+        <div class="center-container">
+            <h2>Habitaciones del Hotel</h2>
+            <div id="user-room-list" class="room-container"></div>
+            <button id="back-to-hotels">Volver a Hoteles</button>
+        </div>
+        </div>
+
+      <!-- SECCIÓN: ACTIVIDADES DISPONIBLES -->
+      <div id="section-actividades-disponibles" class="section" style="display:none;">
+        <div class="center-container">
+          <h2>Actividades Disponibles</h2>
+          <div id="actividad-list" class="actividad-container"></div>
+        </div>
+      </div>
+
+      <!-- SECCIÓN: MIS RESERVAS -->
+      <div id="section-mis-reservas" class="section" style="display:none;">
+        <div class="center-container">
+          <h2>Mis Reservas</h2>
+          <div id="reserves-list" class="reserva-container">
+            <div class="reserves-placeholder">
+              <h3>Reservas próximamente 🚧</h3>
+              <p>Esta sección estará disponible pronto. Aquí podrás ver y gestionar las reservas de tus habitaciones y actividades.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal-proximamente" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Esta funcionalidad se agregará próximamente. ¡Gracias por tu paciencia! 🚧</p>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="./user-dashboard.js"></script>
+</body>
+</html>
+
